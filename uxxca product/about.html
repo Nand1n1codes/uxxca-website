@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="./assets/logo.png">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - UXXCA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    .card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 0 20px 3px rgba(212,175,55,0.15); }
+
+    .plan-green:hover { box-shadow: 0 0 20px 3px rgba(0,255,128,0.15); border-color: #00FF80; }
+    .plan-red:hover { box-shadow: 0 0 20px 3px rgba(255,80,80,0.15); border-color: #FF5050; }
+  </style>
+</head>
+<body class="bg-[#0E0E0E] text-gray-200 font-sans">
+
+  <!-- 🟡 Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#0E0E0E]/80 backdrop-blur border-b border-[#c59908]/20">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-2 text-[#c59908] text-xl font-semibold">
+        <img src="./assets/logo.png" alt="UXXCA Logo" class="w-8 h-8">
+        UXXCA
+      </a>
+      <div class="space-x-8 hidden md:flex">
+        <a href="features.html" class="hover:text-[#c59908] transition">Features</a>
+        <a href="pricing.html" class="hover:text-[#c59908] transition">Pricing</a>
+        <a href="about.html" class="text-[#c59908] font-semibold">About</a>
+        <a href="contact.html" class="hover:text-[#c59908] transition">Contact</a>
+      </div>
+      <a href="#" class="bg-[#c59908] text-black px-4 py-2 rounded-xl font-medium hover:bg-[#E6C200] transition">Get Started</a>
+    </nav>
+  </header>
+
+  <main class="pt-28 max-w-6xl mx-auto px-6">
+
+    <!-- ✨ Hero -->
+    <section class="text-center fade-in mb-20">
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#c59908]/10 to-transparent blur-3xl rounded-full opacity-40"></div>
+        <h1 class="relative text-5xl font-bold text-[#c59908] mb-4">About UXXCA</h1>
+      </div>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+        We’re building the next era of financial intelligence - empowering creators, startups, and enterprises with AI-driven clarity.
+      </p>
+    </section>
+
+    <!-- 🧭 Our Story -->
+    <section class="fade-in mb-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-[#c59908] mb-4">Our Story</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            UXXCA began with a simple mission - to simplify financial management for everyone. We saw creators and businesses drowning in scattered data and complex systems.
+          </p>
+          <p class="text-gray-400">
+            So we built an AI-first finance platform that feels human, acts smart, and adapts to your business. Today, UXXCA is redefining financial understanding - within seconds, in your fingertips.
+          </p>
+        </div>
+        <img src="assets/about-story.jpg" alt="Our Story" class="rounded-2xl border border-[#c59908]/20 shadow-lg">
+      </div>
+    </section>
+
+    <!-- 💡 Philosophy -->
+    <section class="fade-in mb-20 text-center">
+      <h2 class="text-3xl font-bold text-[#c59908] mb-8">Our Philosophy</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card bg-[#111] border border-[#c59908]/20 rounded-2xl p-6">
+          <h3 class="text-xl font-semibold text-[#c59908] mb-2">Transparency</h3>
+          <p class="text-gray-400 text-sm">
+            Every decision we make revolves around clarity. You should always know where your money stands.
+          </p>
+        </div>
+        <div class="card bg-[#111] border border-[#c59908]/20 rounded-2xl p-6 plan-green">
+          <h3 class="text-xl font-semibold text-[#00FF80] mb-2">Automation with Empathy</h3>
+          <p class="text-gray-400 text-sm">
+            Our AI doesn’t just automate — it understands. UXXCA adapts to your needs with human-centered logic.
+          </p>
+        </div>
+        <div class="card bg-[#111] border border-[#c59908]/20 rounded-2xl p-6 plan-red">
+          <h3 class="text-xl font-semibold text-[#c59908] mb-2">Design That Feels Right</h3>
+          <p class="text-gray-400 text-sm">
+            Every pixel of UXXCA is crafted for calm efficiency — clean, powerful, and effortless.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌍 Our Vision -->
+<section class="fade-in mb-24 relative text-center">
+  <div class="absolute inset-0 bg-gradient-to-b from-[#c59908]/10 via-transparent to-[#0E0E0E] blur-3xl opacity-40"></div>
+  
+  <div class="relative max-w-3xl mx-auto bg-[#111]/60 border border-[#c59908]/20 backdrop-blur-lg rounded-3xl p-10 shadow-lg">
+    <h2 class="text-3xl font-bold text-[#c59908] mb-6">Our Vision</h2>
+    <p class="text-gray-300 text-lg leading-relaxed">
+      To make business finance <span class="text-[#FFD700] font-semibold">effortless, intelligent, and empowering</span>.  
+      UXXCA envisions a world where every founder — from a garage startup to a global brand —  
+      can run their company with the clarity of a CFO, <span class="text-[#FFD700] font-semibold">without hiring one</span>.
+    </p>
+  </div>
+</section>
+
+    <!-- 💬 Testimonials -->
+    <section class="fade-in mb-24 text-center">
+      <h2 class="text-3xl font-bold text-[#c59908] mb-8">What People Say</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-[#1A1A1A] border border-[#c59908]/20 rounded-2xl p-6 text-left card">
+          <p class="text-gray-300 italic mb-4">
+            “UXXCA has completely transformed how we track cash flow — it’s like having a CFO that never sleeps.”
+          </p>
+          <h4 class="text-[#c59908] font-semibold">— Vishal Singh, SaaS Founder</h4>
+        </div>
+        <div class="bg-[#1A1A1A] border border-[#c59908]/20 rounded-2xl p-6 text-left card">
+          <p class="text-gray-300 italic mb-4">
+            “The automation is unreal. I spend 80% less time on bookkeeping now. UXXCA just gets it.”
+          </p>
+          <h4 class="text-[#FFD700] font-semibold">— Rhea Kumari, CEO of Guwahati Textiles</h4>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🦶 Footer -->
+   <footer>
+  <div class="footer-top">
+    <div>
+      <img src="./assets/logo.png" alt="UXXCA" style="height:35px;margin-bottom:10px;" />
+      <p>Your AI Finance Suite.</p>
+      <p style="color:#D4AF37;font-size:0.9rem;margin-top:10px;">● All systems operational</p>
+    </div>
+
+    <div>
+      <h4>Use Cases</h4>
+      <a href="./usecases.html">Founders</a>
+      <a href="./usecases.html">Finance Teams</a>
+      <a href="./usecases.html">Agencies</a>
+      <a href="./usecases.html">Students</a>
+    </div>
+
+    <div>
+      <h4>Enterprise</h4>
+      <a href="./pricing.html#enterprise">UXXCA for Enterprise</a>
+      <a href="./pricing.html#enterprise">Custom Integrations</a>
+      <a href="./contact.html">Book a Demo</a>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <a href="./policy.html#privacy">Privacy Policy</a>
+      <a href="./policy.html#terms">Terms of Service</a>
+      <a href="./policy.html#data protection">Data Protection</a>
+    </div>
+  </div>
+
+
+  <!-- 🌐 Socials Section -->
+  <div class="socials" style="border-top:1px solid rgba(212,175,55,0.2);margin-top:30px;padding:20px 0;text-align:center;">
+    <div style="display:flex;justify-content:center;gap:25px;margin-bottom:8px;">
+      <a href="https://x.com/UXXCA" target="_blank" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M18.244 2.25h3.308l-7.227 8.26L22 21.75h-6.593l-5.17-6.772-5.917 6.772H1.01l7.72-8.83L2 2.25h6.75l4.658 6.063L18.244 2.25zM17.094 19.5h1.834L7.05 4.406H5.083L17.094 19.5z"/>
+        </svg>
+      </a>
+
+      <a href="https://linkedin.com/company/UXXCA" target="_blank" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M4.98 3.5A2.49 2.49 0 0 0 2.5 5.98c0 1.37 1.13 2.48 2.48 2.48s2.48-1.11 2.48-2.48A2.48 2.48 0 0 0 4.98 3.5zM3 8.89h3.96V21H3V8.89zm7.16 0h3.8v1.64h.05c.53-1 1.84-2.06 3.8-2.06 4.06 0 4.8 2.67 4.8 6.14V21h-3.95v-5.74c0-1.37-.02-3.14-1.91-3.14-1.91 0-2.21 1.49-2.21 3.04V21H10.2V8.89z"/>
+        </svg>
+      </a>
+
+      <a href="https://instagram.com/UXXCA" target="_blank" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2c1.654 0 3 1.346 3 3s-1.346 3-3 3a3 3 0 0 1 0-6zm4.5-3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+        </svg>
+      </a>
+    </div>
+    <p style="font-size:0.85rem;color:#aaa;">Follow us for updates & insights</p>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 UXXCA. All rights reserved.
+  </div>
+</footer>
+
+<!-- 🪶 Styling -->
+<style>
+  footer {
+    background:#0E0E0E;
+    color:#ccc;
+    padding:50px 8%;
+    font-family:'Inter',sans-serif;
+  }
+  .footer-top {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:40px;
+    margin-bottom:30px;
+  }
+  .footer-top h4 {
+    color:#D4AF37;
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .footer-top a {
+    display:block;
+    color:#aaa;
+    font-size:0.9rem;
+    text-decoration:none;
+    margin:5px 0;
+    transition:color 0.3s;
+  }
+  .footer-top a:hover { color:#D4AF37; }
+
+  .social-link {
+    color:#999;
+    transition: all 0.3s ease;
+  }
+  .social-link:hover {
+    color:#D4AF37;
+    transform: translateY(-2px);
+  }
+
+  .footer-bottom {
+    text-align:center;
+    border-top:1px solid rgba(212,175,55,0.15);
+    margin-top:20px;
+    padding-top:10px;
+    color:#777;
+    font-size:0.85rem;
+  }
+  .vision {
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    .vision p {
+      color: #ccc;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+</style>
+
+
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    faders.forEach(fader => observer.observe(fader));
+  </script>
+</body>
+</html>
