@@ -417,9 +417,11 @@
     <h1>Financial clarity - In Your Fingertips.</h1>
     <p>From your first invoice to your next investor call - UXXCA automates accounting, forecasting, and insights, giving founders peace of mind and control in one clean dashboard.</p>
     <div class="hero-buttons">
-      <button class="btn">Start Free</button>
-      <button class="btn" style="background: transparent; color: #D4AF37; border: 1px solid #D4AF37;">Watch Demo</button>
-    </div>
+  <a href="https://app.uxxca.com" target="_blank" class="btn" style="text-decoration:none;">Start Free</a>
+  <button class="btn" id="watchDemoBtn" style="background: transparent; color: #D4AF37; border: 1px solid #D4AF37;">Watch Demo</button>
+</div>
+
+
   </section>
 
 <section class="problem">
@@ -763,6 +765,104 @@
     font-size:0.85rem;
   }
 </style>
+<!-- 🎥 Watch Demo Modal -->
+<div id="demoModal" class="demo-modal">
+  <div class="demo-content">
+    <span class="close-btn">&times;</span>
+    <video controls autoplay muted>
+      <source src="./assets/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<style>
+  /* 🎬 Demo Modal Styling */
+  .demo-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.4s ease forwards;
+  }
+
+  .demo-modal.active {
+    display: flex;
+  }
+
+  .demo-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(212,175,55,0.3);
+    animation: popIn 0.3s ease;
+  }
+
+  .demo-content video {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #D4AF37;
+    cursor: pointer;
+    text-shadow: 0 0 8px #000;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  .close-btn:hover {
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+<script>
+  // 🎥 Watch Demo Modal Logic
+  const watchBtn = document.getElementById("watchDemoBtn");
+  const demoModal = document.getElementById("demoModal");
+  const closeBtn = document.querySelector(".close-btn");
+
+  watchBtn.addEventListener("click", () => {
+    demoModal.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    demoModal.classList.remove("active");
+    const video = demoModal.querySelector("video");
+    video.pause();
+  });
+
+  demoModal.addEventListener("click", (e) => {
+    if (e.target === demoModal) {
+      demoModal.classList.remove("active");
+      const video = demoModal.querySelector("video");
+      video.pause();
+    }
+  });
+</script>
 
 
 </body>
