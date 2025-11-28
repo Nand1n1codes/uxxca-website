@@ -150,17 +150,45 @@
     <h1> Finance Smarter Today.</h1>
     <p>Whether you're scaling your business or just getting started, we’d love to hear from you. Drop us a message and our team will get back to you within 24 hours.</p>
 
-    <<!-- modify this form HTML and place wherever you want your form -->
+    <!-- modify this form HTML and place wherever you want your form -->
 <!-- Contact Form -->
-<form
-  action="https://formspree.io/f/mqagrwng"
-  method="POST"
->
-  <label for="name">Full Name</label>
+<!-- Contact Form -->
+<form action="https://formspree.io/f/mqagrwng" method="POST">
+
+  <label for="name">Name</label>
   <input type="text" id="name" name="name" placeholder="Your name" required />
 
   <label for="email">Email Address</label>
   <input type="email" id="email" name="email" placeholder="you@business.com" required />
+
+  <!-- Plan Selection -->
+  <label for="plan">Select Plan</label>
+  <select id="plan" name="plan" required style="padding:0.9rem;background:#222;border:1px solid #333;color:#f5f5f5;border-radius:8px;">
+    <option value="" disabled selected>Select your plan</option>
+    
+    <option value="Growth">Growth</option>
+    <option value="Pro">Pro</option>
+    <option value="Enterprise">Enterprise</option>
+  </select>
+
+  <!-- Request PIN Button -->
+  <button type="button" id="requestPinBtn" style="background:#333;color:#d4af37;border:1px solid #d4af37;">
+    Request a 4-digit PIN
+  </button>
+
+  <!-- Hidden PIN Field -->
+  <div id="pinField" style="display:none;">
+    <label for="pin">4-Digit PIN</label>
+    <input 
+      type="text"
+      id="pin"
+      name="pin"
+      maxlength="4"
+      pattern="[0-9]{4}"
+      placeholder="Enter your PIN"
+      style="letter-spacing:4px;"
+    />
+  </div>
 
   <label for="message">Message</label>
   <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
@@ -168,57 +196,20 @@
   <button type="submit">Send Message</button>
 </form>
 
+<script>
+  const requestBtn = document.getElementById("requestPinBtn");
+  const pinField = document.getElementById("pinField");
+  const pinInput = document.getElementById("pin");
 
-    <div class="contact-info">
-      <h3>📍 Our HQ</h3>
-      <p>Guwahati, India</p>
+  requestBtn.addEventListener("click", () => {
+    pinField.style.display = "block";
+    pinInput.required = true;
+    requestBtn.disabled = true;
+    requestBtn.innerText = "PIN Requested";
+    requestBtn.style.opacity = "0.6";
+  });
+</script>
 
-      <h3>📧 Email</h3>
-      <p>uxxca.app@gmail.com</p>
-
-      <h3>💬 Support</h3>
-      <p>Available Mon–Sat, 10AM–8PM IST</p>
-    </div>
-  </section>
-
-  <footer>
-  <div class="footer-top">
-    <div>
-      <img src="./assets/logo.png" alt="UXXCA" style="height:35px;margin-bottom:10px;" />
-      <p>Your AI Finance Suite.</p>
-      <p style="color:#D4AF37;font-size:0.9rem;margin-top:10px;">● All systems operational</p>
-    </div>
-
-    <div>
-      <h4>Use Cases</h4>
-      <a href="./usecases.html">Founders</a>
-      <a href="./usecases.html">Finance Teams</a>
-      <a href="./usecases.html">Agencies</a>
-      <a href="./usecases.html">Students</a>
-    </div>
-
-    <div>
-      <h4>Enterprise</h4>
-      <a href="./pricing.html#enterprise">UXXCA for Enterprise</a>
-      <a href="./pricing.html#enterprise">Custom Integrations</a>
-      <a href="./contact.html">Book a Demo</a>
-    </div>
-
-    <div>
-      <h4>Legal</h4>
-      <a href="./policy.html#privacy">Privacy Policy</a>
-      <a href="./policy.html#terms">Terms of Service</a>
-      <a href="./policy.html#data protection">Data Protection</a>
-    </div>
-  </div>
-
-    <div>
-      <h4>Legal</h4>
-      <a href="./policy#privacy">Privacy Policy</a>
-      <a href="./policy#terms">Terms of Service</a>
-      <a href="./policy#data protection">Data Protection</a>
-    </div>
-  </div>
 
   <!-- 🌐 Socials Section -->
   <div class="socials" style="border-top:1px solid rgba(212,175,55,0.2);margin-top:30px;padding:20px 0;text-align:center;">
